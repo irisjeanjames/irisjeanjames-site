@@ -156,3 +156,11 @@ table.grades td.n,table.grades th.n{text-align:right;font-variant-numeric:tabula
 @media (prefers-reduced-motion:reduce){.casecard{transition:none}}
 .prose ul.tiles{max-width:none;padding-left:0}
 h1,h2{font-variation-settings:"opsz" 144}
+
+/* Screenshot tiles: leaf crop that grows into a squircle on hover */
+.tile .shot{margin:10px 10px 0;border-radius:4px 64px 4px 64px;transition:border-radius .4s cubic-bezier(.2,.8,.2,1)}
+.tile:hover .shot,.tile:focus-visible .shot{border-radius:30px}
+@supports (corner-shape:squircle){
+  .tile:hover .shot,.tile:focus-visible .shot{corner-shape:squircle;border-radius:44px}
+}
+@media (prefers-reduced-motion:reduce){.tile .shot{transition:none}}

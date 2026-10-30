@@ -16,7 +16,7 @@ intro: Seven regional visitor's guides that began as print publications and have
 Each guide began as a print publication that helps visitors plan a trip to one place: where to eat, where to stay, what to do. The website is its digital edition, and that shapes the business. Print advertisers often pay a small upgrade fee to add a directory listing online. For a full-page advertiser, the listing comes as a bonus that makes the page worth more. So every site has two audiences. Visitors need to find things fast. Advertisers, some of them the best-known names in their regions, need their listings to look right and stay online.
 
 ## The print editions
-I designed the print editions of the Delaware Beaches and Tennessee Smokies guides in 2019. The Tennessee Smokies guide runs 76 pages and the Delaware Beaches guide 36, with editorial pages, advertorials, and an ad index that builds itself in InDesign.
+I was lead designer on the 2019 print editions of the Delaware Beaches and Tennessee Smokies guides. The Tennessee Smokies guide runs 76 pages and the Delaware Beaches guide 36, with editorial pages, advertorials, and an ad index that builds itself in InDesign. After those editions I moved to the web department as a junior developer, and I worked my way up to senior web developer. Knowing the print side is why the websites follow the guides so closely.
 
 ## From Drupal to WordPress
 The guides started on Drupal. I migrated them to WordPress, which was at version 5.1 at the time, and I have kept WordPress, themes, and plugins current ever since. The listings belong to paying advertisers, so the move had to keep every one of them intact.
