@@ -3,19 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Iris Jean James | Web developer and server admin</title>
-<meta name="description" content="Iris Jean James builds, speeds up, and looks after WordPress websites. A look at 36 live sites and the work behind them.">
+<title>IrisJean James | Web developer and server admin</title>
+<meta name="description" content="IrisJean James builds, speeds up, and looks after WordPress websites. A look at 40 live sites and the work behind them.">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="34" height="34">Iris Jean James</a>
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="34" height="34">IrisJean James</a>
     <nav class="nav" aria-label="Main">
       <a href="#work">Sites</a>
       <a href="#cases">Case studies</a>
@@ -28,7 +27,7 @@
     <div class="hero" id="top">
       <div>
         <h1>I build websites, then keep them fast, findable, and online.</h1>
-        <p class="lede">Thirty-six live sites for a regional publisher, its events, and the businesses around it. I'm the contract developer and server admin behind them.</p>
+        <p class="lede">Forty live sites for a regional publisher, its events, and the businesses around it. I'm the contract developer and server admin behind them.</p>
         <div class="actions">
           <a class="btn solid" href="#work">See the sites</a>
           <a class="btn" href="#cases">Read the case studies</a>
@@ -113,53 +112,22 @@
     <section id="cases" aria-labelledby="cases-h">
       <div class="sec-head">
         <h2 id="cases-h">Case studies</h2>
-        <p class="lede">Numbers come from my own audit tool, which scores search, accessibility, and speed. I compare each site with its first recorded run.</p>
+        <p class="lede">Two long-running projects, from the first migration to the latest audit.</p>
       </div>
-
-      <article class="case" style="--c:#d9394f">
-        <div>
-          <p class="kind"><i class="dot"></i>Publication</p>
+      <div class="casecards">
+        <a class="casecard" style="--c:#48ac58" href="work/visitor-guides/">
+          <span class="kind"><i class="dot"></i>Seven regional guides</span>
+          <h3>The Visitor's Guides</h3>
+          <p>Moved from Drupal to WordPress, carried through two hosting moves in the busy season, and now graded A. Dollywood, Busch Gardens, and Colonial Williamsburg are among the advertisers.</p>
+          <span class="go">Read the case study</span>
+        </a>
+        <a class="casecard" style="--c:#d9394f" href="work/coastal-virginia-magazine/">
+          <span class="kind"><i class="dot"></i>Magazine and three branded sites</span>
           <h3>Coastal Virginia Magazine</h3>
-          <p>A large magazine site with a media library of more than 12,000 images. It scored a C+ and was slow, because page caching was switched off.</p>
-          <ul>
-            <li>Turned on page caching and fixed the page structure: one heading per page, a real main area, and readable link text.</li>
-            <li>Darkened the brand teal so text meets the 4.5 to 1 contrast standard.</li>
-            <li>Added alt text to 12,035 images. An AI model drafted the descriptions from the pictures, I spot-checked them, and they went in through the database. The AI cost came to $0.83.</li>
-          </ul>
-          <p>Result: C+ to A- in two days of work.</p>
-        </div>
-        <div class="bars" role="group" aria-label="Coastal Virginia Magazine audit scores, first run and latest">
-          <h4>Audit score out of 100</h4>
-          <div class="row"><div class="lab"><span>Overall</span><span>77 to 90</span></div><div class="track"><i class="before" style="--b:77.3%"></i></div><div class="track"><i class="after" style="--a:90.4%"></i></div></div>
-          <div class="row"><div class="lab"><span>Accessibility</span><span>78 to 94</span></div><div class="track"><i class="before" style="--b:78%"></i></div><div class="track"><i class="after" style="--a:94%"></i></div></div>
-          <div class="row"><div class="lab"><span>On-page search</span><span>80 to 91</span></div><div class="track"><i class="before" style="--b:80.4%"></i></div><div class="track"><i class="after" style="--a:90.6%"></i></div></div>
-          <div class="row"><div class="lab"><span>Speed (lab test)</span><span>73 to 84</span></div><div class="track"><i class="before" style="--b:73%"></i></div><div class="track"><i class="after" style="--a:84.2%"></i></div></div>
-          <div class="legend"><span>First run, 28 Sep 2026</span><span>Latest, 10 Oct 2026</span></div>
-          <p class="fine">Speed is a lab score. I haven't compared it with real-visitor data.</p>
-        </div>
-      </article>
-
-      <article class="case" style="--c:#48ac58">
-        <div>
-          <p class="kind"><i class="dot"></i>Visitor's guide</p>
-          <h3>High Country Visitor's Guide</h3>
-          <p>One of four guide sites that share a setup. One evening of work took it to an A.</p>
-          <ul>
-            <li>Wrote a small plugin that fixes headings, landmarks, link names, and missing meta descriptions on every page, and survives theme updates.</li>
-            <li>Preloaded the hero image that decides how fast the page feels.</li>
-            <li>Found one cache setting that was off. Turning it on added 12 points to the speed score.</li>
-          </ul>
-          <p>Result: overall A (95.6), with the on-page search score at 100.</p>
-        </div>
-        <div class="bars" role="group" aria-label="High Country Visitor's Guide audit scores, before and after">
-          <h4>Audit score out of 100</h4>
-          <div class="row"><div class="lab"><span>On-page search</span><span>68 to 100</span></div><div class="track"><i class="before" style="--b:68%"></i></div><div class="track"><i class="after" style="--a:100%"></i></div></div>
-          <div class="row"><div class="lab"><span>Accessibility</span><span>87 to 94</span></div><div class="track"><i class="before" style="--b:87%"></i></div><div class="track"><i class="after" style="--a:94%"></i></div></div>
-          <div class="row"><div class="lab"><span>Speed (lab test)</span><span>69 to 84</span></div><div class="track"><i class="before" style="--b:69%"></i></div><div class="track"><i class="after" style="--a:84%"></i></div></div>
-          <div class="legend"><span>12 Oct 2026</span><span>20 Oct 2026</span></div>
-          <p class="fine">Speed is a lab score. I haven't compared it with real-visitor data.</p>
-        </div>
-      </article>
+          <p>Migrated from TownNews to WordPress, then built up with monthly issues, advertising, and reporting. The October audit took it from C+ to A-.</p>
+          <span class="go">Read the case study</span>
+        </a>
+      </div>
     </section>
 
     <section id="how" aria-labelledby="how-h">
@@ -183,7 +151,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Iris Jean James</p>
+    <p>&copy; 2026 IrisJean James</p>
     <p>Sites shown with permission from VistaMedia, Inc. Logos and content belong to their owners.</p>
   </footer>
 </div>

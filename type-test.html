@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Headline font test | IrisJean James</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Instrument+Serif:ital@0;1&family=DM+Serif+Display&family=Young+Serif&family=Gloock&family=Literata:opsz,wght@7..72,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a405a;--soft:#4a6678;--line:#d5e0e8;--body:"Literata",Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:#fff;font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+body.sans{--body:"Instrument Sans",system-ui,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+h1.t{font:700 1.6rem system-ui;margin:0 0 8px}
+.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 6px;font:500 .95rem system-ui}
+.bar button{font:600 .95rem system-ui;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.bar button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.s{border-top:1px solid var(--line);padding:30px 0}
+.s .name{font:600 .95rem system-ui;color:var(--soft);margin:0 0 12px}
+.s .h1{margin:0 0 .5rem;font-size:clamp(2.2rem,5.6vw,3.8rem);line-height:1.04;max-width:16ch}
+.s .h2{margin:1.3rem 0 .3rem;font-size:2rem;line-height:1.1}
+.s .h3{margin:.8rem 0 .2rem;font-size:1.35rem;line-height:1.2}
+.s p.b{margin:0;max-width:60ch;font-family:var(--body)}
+.f1 .h1,.f1 .h2,.f1 .h3{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 0,"WONK" 0;font-weight:650;letter-spacing:-.02em}
+.f2 .h1,.f2 .h2,.f2 .h3{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 0;font-weight:600;letter-spacing:-.02em}
+.f3 .h1,.f3 .h2,.f3 .h3{font-family:"Fraunces",serif;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-weight:500;letter-spacing:-.015em}
+.i1 .h1,.i1 .h2,.i1 .h3{font-family:"Instrument Serif",serif;font-weight:400;letter-spacing:0}
+.i1 .h1{font-size:clamp(2.5rem,6.2vw,4.2rem)}
+.i1 .h2{font-size:2.3rem}
+.d1 .h1,.d1 .h2,.d1 .h3{font-family:"DM Serif Display",serif;font-weight:400;letter-spacing:-.01em}
+.y1 .h1,.y1 .h2,.y1 .h3{font-family:"Young Serif",serif;font-weight:400;letter-spacing:-.01em}
+.g1 .h1,.g1 .h2,.g1 .h3{font-family:"Gloock",serif;font-weight:400}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1 class="t">Pick a headline font</h1>
+  <p style="margin:0;max-width:62ch">Same headlines, different faces. The three Fraunces versions differ in how soft and quirky the letters are. Instrument Serif is the condensed one you mentioned. DM Serif Display, Young Serif, and Gloock are wider options. Tell me the number or name you like.</p>
+  <div class="bar" role="group" aria-label="Body text font">Body text:
+    <button type="button" id="b-serif" aria-pressed="true">Serif (Literata)</button>
+    <button type="button" id="b-sans" aria-pressed="false">Sans (Instrument Sans)</button>
+  </div>
+
+  <section class="s f1"><p class="name">1. Fraunces, sharp</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s f2"><p class="name">2. Fraunces, soft</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s f3"><p class="name">3. Fraunces, soft and quirky</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s i1"><p class="name">4. Instrument Serif</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s d1"><p class="name">5. DM Serif Display</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s y1"><p class="name">6. Young Serif</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+  <section class="s g1"><p class="name">7. Gloock</p><p class="h1">I build websites, then keep them fast, findable, and online.</p><p class="h2">The Visitor's Guides</p><p class="h3">Coastal Virginia Magazine</p><p class="b">Seven regional guides that I moved from Drupal to WordPress, kept online through two hosting moves during the busy season, and still build and run today.</p></section>
+</div>
+<script>
+(function(){
+  var s=document.getElementById('b-serif'),n=document.getElementById('b-sans');
+  function set(sans){document.body.classList.toggle('sans',sans);s.setAttribute('aria-pressed',sans?'false':'true');n.setAttribute('aria-pressed',sans?'true':'false');}
+  s.addEventListener('click',function(){set(false)});
+  n.addEventListener('click',function(){set(true)});
+})();
+</script>
+</body>
+</html>
