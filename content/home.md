@@ -1,6 +1,6 @@
 ---
 title: IrisJean James
-intro: Forty live sites for a regional publisher, its events, and the businesses around it. I'm the contract developer and server admin behind them.
+intro: Twenty-eight live sites for a regional publisher, its events, and the businesses around it. I'm the contract developer and server admin behind them.
 ---
 
 ## Headline

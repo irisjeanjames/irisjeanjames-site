@@ -1,196 +1,143 @@
 {
- "groups": {
-  "publications": {
-   "label": "Publication",
-   "color": "#d9394f",
-   "darkText": false
+  "groups": {
+    "publications": {
+      "label": "Publication",
+      "color": "#d9394f",
+      "darkText": false
+    },
+    "guides": {
+      "label": "Visitor's guide",
+      "color": "#48ac58",
+      "darkText": false
+    },
+    "events": {
+      "label": "Event",
+      "color": "#3c98c6",
+      "darkText": false
+    },
+    "clients": {
+      "label": "Client site",
+      "color": "#953189",
+      "darkText": false
+    },
+    "corporate": {
+      "label": "Corporate",
+      "color": "#f7c848",
+      "darkText": true
+    }
   },
-  "guides": {
-   "label": "Visitor's guide",
-   "color": "#48ac58",
-   "darkText": false
-  },
-  "events": {
-   "label": "Event",
-   "color": "#3c98c6",
-   "darkText": false
-  },
-  "clients": {
-   "label": "Client site",
-   "color": "#953189",
-   "darkText": false
-  },
-  "level1": {
-   "label": "Level 1 site",
-   "color": "#393d90",
-   "darkText": false
-  },
-  "corporate": {
-   "label": "Corporate",
-   "color": "#f7c848",
-   "darkText": true
-  }
- },
- "sites": [
-  {
-   "domain": "coastalvirginiamag.com",
-   "group": "publications"
-  },
-  {
-   "domain": "coastalvirginiaweddings.com",
-   "group": "publications"
-  },
-  {
-   "domain": "covabizmag.com",
-   "group": "publications"
-  },
-  {
-   "domain": "covadeals.com",
-   "group": "publications"
-  },
-  {
-   "domain": "outerbankscoastallife.com",
-   "group": "publications"
-  },
-  {
-   "domain": "blueridgecountry.com",
-   "group": "publications"
-  },
-  {
-   "domain": "theroanoker.com",
-   "group": "publications"
-  },
-  {
-   "domain": "lynchburgideahouse.com",
-   "group": "publications"
-  },
-  {
-   "domain": "covaideahouse.com",
-   "group": "publications"
-  },
-  {
-   "domain": "highcountry.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "lakeanna.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "oceancity.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "visitvirginia.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "delawarebeaches.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "tennesseesmokies.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "virginiabeach.guide",
-   "group": "guides"
-  },
-  {
-   "domain": "gowilliamsburg.com",
-   "group": "guides"
-  },
-  {
-   "domain": "covaburgerbattle.com",
-   "group": "events"
-  },
-  {
-   "domain": "coastalvirginiawinefest.com",
-   "group": "events"
-  },
-  {
-   "domain": "lynchburgrestaurantweek.com",
-   "group": "events"
-  },
-  {
-   "domain": "puttputt.com",
-   "group": "clients"
-  },
-  {
-   "domain": "rudees.com",
-   "group": "clients"
-  },
-  {
-   "domain": "murphyspub.com",
-   "group": "clients"
-  },
-  {
-   "domain": "murphyspubvb.com",
-   "group": "clients"
-  },
-  {
-   "domain": "awfularthursobx.com",
-   "group": "clients"
-  },
-  {
-   "domain": "awfularthursbeachshop.com",
-   "group": "clients"
-  },
-  {
-   "domain": "trostlaw.com",
-   "group": "clients"
-  },
-  {
-   "domain": "williamsburgwalkingtours.com",
-   "group": "clients"
-  },
-  {
-   "domain": "virginiabeachhotelassociation.com",
-   "group": "clients"
-  },
-  {
-   "domain": "nagsheadbenfranklin.com",
-   "group": "clients"
-  },
-  {
-   "domain": "doughboyspizza.com",
-   "group": "clients"
-  },
-  {
-   "domain": "newyorkdelipizza.com",
-   "group": "clients"
-  },
-  {
-   "domain": "beacheventsvb.com",
-   "group": "clients"
-  },
-  {
-   "domain": "barclaytowersvb.com",
-   "group": "level1"
-  },
-  {
-   "domain": "beachcarousel.com",
-   "group": "level1"
-  },
-  {
-   "domain": "capeshotel.com",
-   "group": "level1"
-  },
-  {
-   "domain": "vda-level1.website",
-   "group": "level1"
-  },
-  {
-   "domain": "vistadigitalagency.com",
-   "group": "corporate"
-  },
-  {
-   "domain": "vistamediainc.com",
-   "group": "corporate"
-  },
-  {
-   "domain": "vistacaresfoundation.com",
-   "group": "corporate"
-  }
- ]
+  "sites": [
+    {
+      "domain": "coastalvirginiamag.com",
+      "group": "publications"
+    },
+    {
+      "domain": "covabizmag.com",
+      "group": "publications"
+    },
+    {
+      "domain": "covadeals.com",
+      "group": "publications"
+    },
+    {
+      "domain": "blueridgecountry.com",
+      "group": "publications"
+    },
+    {
+      "domain": "theroanoker.com",
+      "group": "publications"
+    },
+    {
+      "domain": "lynchburgideahouse.com",
+      "group": "publications"
+    },
+    {
+      "domain": "covaideahouse.com",
+      "group": "publications"
+    },
+    {
+      "domain": "highcountry.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "lakeanna.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "oceancity.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "visitvirginia.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "delawarebeaches.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "tennesseesmokies.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "virginiabeach.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "gowilliamsburg.com",
+      "group": "guides"
+    },
+    {
+      "domain": "covaburgerbattle.com",
+      "group": "events"
+    },
+    {
+      "domain": "coastalvirginiawinefest.com",
+      "group": "events"
+    },
+    {
+      "domain": "lynchburgrestaurantweek.com",
+      "group": "events"
+    },
+    {
+      "domain": "puttputt.com",
+      "group": "clients"
+    },
+    {
+      "domain": "rudees.com",
+      "group": "clients"
+    },
+    {
+      "domain": "awfularthursobx.com",
+      "group": "clients"
+    },
+    {
+      "domain": "trostlaw.com",
+      "group": "clients"
+    },
+    {
+      "domain": "williamsburgwalkingtours.com",
+      "group": "clients"
+    },
+    {
+      "domain": "virginiabeachhotelassociation.com",
+      "group": "clients"
+    },
+    {
+      "domain": "beacheventsvb.com",
+      "group": "clients"
+    },
+    {
+      "domain": "vistadigitalagency.com",
+      "group": "corporate"
+    },
+    {
+      "domain": "vistamediainc.com",
+      "group": "corporate"
+    },
+    {
+      "domain": "vistacaresfoundation.com",
+      "group": "corporate"
+    }
+  ]
 }
