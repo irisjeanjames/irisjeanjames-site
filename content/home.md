@@ -59,11 +59,11 @@ I migrated the sites from Drupal, developed their business directories and adver
 Because a vacation planning website really shouldn't need a vacation of its own.
 
 ## Card: Coastal Virginia Magazine
-**Twenty years of content. A whole new chapter.**
+**Twenty-five years of stories. A whole new chapter.**
 
-Migrating more than two decades of publishing content from TownNews to WordPress was just the beginning.
+Migrating the magazine's archive, back to 2010, from TownNews to WordPress was just the beginning.
 
-I helped transform the magazine's digital presence into a flexible publishing platform supporting monthly issues, advertising, analytics, and multiple related brands.
+I helped transform the magazine's digital presence into a flexible publishing platform supporting each issue, advertising, analytics, and multiple related brands.
 
 And because websites are never really finished, I continue improving accessibility, performance, and the systems keeping everything running.
 

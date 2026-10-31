@@ -6,7 +6,7 @@
       "darkText": false
     },
     "guides": {
-      "label": "Visitor's guide",
+      "label": "Visitor’s guide",
       "color": "#48ac58",
       "darkText": false
     },
@@ -28,16 +28,20 @@
   },
   "sites": [
     {
+      "domain": "puttputt.com",
+      "group": "clients"
+    },
+    {
       "domain": "coastalvirginiamag.com",
       "group": "publications"
     },
     {
-      "domain": "covabizmag.com",
-      "group": "publications"
+      "domain": "beacheventsvb.com",
+      "group": "clients"
     },
     {
-      "domain": "covadeals.com",
-      "group": "publications"
+      "domain": "virginiabeachhotelassociation.com",
+      "group": "clients"
     },
     {
       "domain": "blueridgecountry.com",
@@ -48,12 +52,12 @@
       "group": "publications"
     },
     {
-      "domain": "lynchburgideahouse.com",
-      "group": "publications"
+      "domain": "gowilliamsburg.com",
+      "group": "guides"
     },
     {
-      "domain": "covaideahouse.com",
-      "group": "publications"
+      "domain": "oceancity.guide",
+      "group": "guides"
     },
     {
       "domain": "highcountry.guide",
@@ -64,11 +68,7 @@
       "group": "guides"
     },
     {
-      "domain": "oceancity.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "visitvirginia.guide",
+      "domain": "tennesseesmokies.guide",
       "group": "guides"
     },
     {
@@ -76,15 +76,7 @@
       "group": "guides"
     },
     {
-      "domain": "tennesseesmokies.guide",
-      "group": "guides"
-    },
-    {
       "domain": "virginiabeach.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "gowilliamsburg.com",
       "group": "guides"
     },
     {
@@ -96,12 +88,28 @@
       "group": "events"
     },
     {
-      "domain": "lynchburgrestaurantweek.com",
-      "group": "events"
+      "domain": "covabizmag.com",
+      "group": "publications"
     },
     {
-      "domain": "puttputt.com",
-      "group": "clients"
+      "domain": "covadeals.com",
+      "group": "publications"
+    },
+    {
+      "domain": "lynchburgideahouse.com",
+      "group": "publications"
+    },
+    {
+      "domain": "covaideahouse.com",
+      "group": "publications"
+    },
+    {
+      "domain": "visitvirginia.guide",
+      "group": "guides"
+    },
+    {
+      "domain": "lynchburgrestaurantweek.com",
+      "group": "events"
     },
     {
       "domain": "rudees.com",
@@ -117,14 +125,6 @@
     },
     {
       "domain": "williamsburgwalkingtours.com",
-      "group": "clients"
-    },
-    {
-      "domain": "virginiabeachhotelassociation.com",
-      "group": "clients"
-    },
-    {
-      "domain": "beacheventsvb.com",
       "group": "clients"
     },
     {

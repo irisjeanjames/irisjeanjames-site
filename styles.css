@@ -224,3 +224,15 @@ footer .closing{font-style:italic}
 .contact p{margin-bottom:.9rem}
 .contact .mail{display:inline-block;margin-top:.6rem}
 @media (max-width:600px){table.grades{display:block;overflow-x:auto;max-width:100%}}
+
+/* Figures and buttons inside case studies */
+.prose .actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 26px}
+.fig.cover img{border-radius:4px 28px 4px 28px}
+.fig.cover:hover img{border-radius:14px}
+.figs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px 22px;margin:26px 0 8px;align-items:start}
+.fig{margin:0}
+.fig img{width:100%;height:auto;border-radius:4px 64px 4px 64px;border:1px solid var(--line);transition:border-radius .4s cubic-bezier(.2,.8,.2,1)}
+.fig:hover img{border-radius:30px}
+@supports (corner-shape:squircle){.fig:hover img{corner-shape:squircle;border-radius:44px}}
+.fig figcaption{margin-top:.6rem;font-size:.92rem;line-height:1.4;color:var(--ink-soft);text-align:center}
+@media (prefers-reduced-motion:reduce){.fig img{transition:none}}

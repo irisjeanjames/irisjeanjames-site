@@ -24,6 +24,17 @@ Before I was managing servers for these guides, I was designing the guides thems
 
 I served as lead designer for the 2019 Delaware Beaches and Tennessee Smokies print editions: 36 pages and 76 pages, respectively. Editorial layouts, advertorials, and an automatically generated InDesign ad index were all part of the job. So were deadlines, typography, and making a lot of information feel effortless to navigate.
 
+[[image assets/print/tennessee-smokies-2019-cover.webp | Cover of the 2019 Tennessee Smokies Visitors Guide, a zip-lining couple on a rope bridge | Tennessee Smokies Visitors Guide, 2019. 76 pages.]]
+[[image assets/print/delaware-beaches-2019-cover.webp | Cover of the 2019 Delaware Beaches Visitors Guide, a seafood platter on a dock above a canal | Delaware Beaches Visitors Guide, 2019. 36 pages.]]
+
+Inside the Tennessee Smokies book, pages ranged from editorial openers to town maps carrying advertiser logos.
+
+[[image assets/print/tennessee-smokies-2019-welcome.webp | Interior page of the 2019 Tennessee Smokies guide: Welcome to the Tennessee Smokies in script lettering over a sunset mountain view, two columns of text and a column of photos | The opening spread: editorial layout with a custom script title and a photo column.]]
+[[image assets/print/tennessee-smokies-2019-pigeon-forge.webp | Interior page of the 2019 Tennessee Smokies guide: Pigeon Forge introduction with a photo collage header, two columns of text and the start of a numbered map with advertiser logos | A town section opener: photo collage, editorial copy and the start of the advertiser map.]]
+
+[[button Flip through the Tennessee Smokies edition | https://online.fliphtml5.com/uthw/brgo/]]
+[[button Flip through the Delaware Beaches edition | https://online.fliphtml5.com/uthw/jtdm/]]
+
 After that, I moved into the web department as a junior developer and eventually became a senior web developer. Having worked on both sides means I understand the guides as publications *and* as websites. It's a useful perspective when the print and digital experiences need to feel like they belong to the same family.
 
 ## From Drupal to WordPress, without leaving the advertisers behind
@@ -35,6 +46,12 @@ Those listings aren't just content. They're part of what businesses pay for, som
 Once the sites were on WordPress, I developed their directory experiences with business pages, categories, partner profiles, and area menus. I also built custom coupon layouts so each destination could keep its own visual identity.
 
 Seven sites, seven personalities, and thankfully no need to reinvent the wheel seven times.
+
+[[image assets/print/oceancity-directory-map.webp | Ocean City Visitors Guide activities page with a map of listings above a grid of businesses | A category page: every listing on a map, then a grid of businesses.]]
+[[image assets/print/oceancity-listing.webp | A business listing page for an Ocean City mini golf course with address, social icons and a coupons badge | A business listing, with address, links and a coupons badge.]]
+[[image assets/print/oceancity-coupons.webp | The Ocean City coupons page, a grid of dashed-border coupon cards | Custom coupon layouts, with each guide keeping its own look.]]
+
+
 
 ## Two hosting migrations. During travel season. Naturally.
 
