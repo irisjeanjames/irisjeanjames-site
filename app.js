@@ -92,6 +92,12 @@
     data = d;
     buildFilters();
     render();
+    // The wall fills in after the page has already jumped to a #section, which pushes
+    // that section down. Jump again once the wall has its height.
+    if (location.hash.length > 1) {
+      var t = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (t) requestAnimationFrame(function () { t.scrollIntoView(); });
+    }
   }).catch(function () {
     countEl.textContent = 'The site list could not load. Reload the page to try again.';
   });

@@ -19,6 +19,14 @@ My background in graphic design taught me to think about hierarchy, storytelling
 
 A beautiful interface is wonderful. A beautiful interface that makes sense? Even better.
 
+### Accessible first. Because good accessibility is good everything.
+
+Accessibility is a priority for me, not a cleanup task. I try to understand who actually uses a site, whether that's a traveler on a phone, someone navigating by keyboard or screen reader, or a staff member updating a page at the end of a long day, and build around them.
+
+It also pays off elsewhere. Clear structure, meaningful headings, real alt text, and fast pages help people, and they are the same things search engines and AI-driven search (whatever we're calling Generative Engine Optimization this month) use to understand a site. Good accessibility is good SEO.
+
+Every site I get my hands on gets set up for it. Sometimes an older site can be coaxed into accessibility. Sometimes it's better to start fresh and do it right from the beginning. I'll tell you which one I think it is.
+
 ### Build it right. Then build it to last.
 
 I love solving problems, but I'd rather not solve the same problem every Tuesday.
@@ -59,6 +67,7 @@ A successful project shouldn't require a developer standing nearby with a magic 
 
 - **I back up first.** Before any change that is hard to undo, I take a copy of the database and the config, and I write down where it is.
 - **I write it all down.** Every job gets a write-up: the goal, before and after numbers, what changed, what is still open, and what I got wrong.
+- **I audit for accessibility, not just speed.** Headings, alt text, contrast, keyboard paths, and focus get checked on every site I touch, and the findings go in the same write-up as everything else.
 - **I fix things so they stay fixed.** Small plugins and settings instead of edits to a theme, so an update doesn't undo the work.
 
 ## The Road So Far

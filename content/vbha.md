@@ -32,6 +32,10 @@ I rebuilt the site on WordPress with mobile-friendly layouts and practical tools
 
 I followed up with one-on-one training and video tutorials, because handing someone a new website without showing them how it works isn't much of a handoff.
 
+## Built for everyone who visits
+
+Accessibility was part of the design work from the start, not a pass at the end. The association's Level 1 requirements called for it, and I treated them as a floor. I shaped layouts, headings, and navigation so travelers and members could find their way however they got there, and I ran accessibility checks in my audits along the way. Good accessibility ratings were high on my priority list, and they helped search visibility too.
+
 ## The result: more independence, less friction
 
 The association can now manage its own content. Visitors have a clearer path to planning a Virginia Beach trip, and members have a central place to connect.

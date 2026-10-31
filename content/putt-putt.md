@@ -54,5 +54,9 @@ I audited all 24 franchise sites and the corporate site, then built a client-fac
 
 > The health grade comes from my project-specific audit checklist. It is **not** a Lighthouse score or a formal accessibility certification.
 
+## Accessible across all 25 sites
+
+Accessibility was part of the design work here too, and part of every audit I ran. Families of every age and ability book parties and look up hours on these sites, so I checked each location for the basics: heading structure, alt text, contrast, and keyboard-friendly navigation. Because it's one network, a fix made once reaches every location. Good accessibility ratings were a priority, and they support search visibility as well.
+
 ## See it live
 [[sites]]
