@@ -1,49 +1,72 @@
 ---
 title: The Visitor's Guides
 color: green
-intro: Seven regional visitor's guides that began as print publications and have a website each. I moved the sites from Drupal to WordPress, kept them online through two hosting moves during the busy season, and still build and run them today.
+intro: Seven destinations, seven websites, and one big job: helping travelers find their next adventure while keeping the technology behind the scenes running smoothly. From print design to WordPress migrations and server moves, I've been along for the whole ride.
 ---
 
-## Facts
-- My role: Developer and server administrator, from the first build to the latest audit
-- The sites: Delaware Beaches, High Country, Lake Anna, Ocean City, Tennessee Smokies, Virginia Beach, and Williamsburg
-- Built with: WordPress, Elementor Pro, and GeoDirectory for the business directory
-- Hosting: Old standalone servers, then AWS, then a VPS that I administer
-- Formats: A print guide first, then a website for each
-- Advertisers: Directory listings for businesses including Dollywood, Busch Gardens, and Colonial Williamsburg
+## Seven destinations. One very well-traveled developer.
 
-## What the guides are for
-Each guide began as a print publication that helps visitors plan a trip to one place: where to eat, where to stay, what to do. The website is its digital edition, and that shapes the business. Print advertisers often pay a small upgrade fee to add a directory listing online. For a full-page advertiser, the listing comes as a bonus that makes the page worth more. So every site has two audiences. Visitors need to find things fast. Advertisers, some of them the best-known names in their regions, need their listings to look right and stay online.
+Beaches, mountains, amusement parks, and plenty of places to eat along the way. The Visitor's Guides started as regional print publications, each helping travelers figure out where to go, what to do, and which roadside attraction deserves a detour.
 
-## The print editions
-I was lead designer on the 2019 print editions of the Delaware Beaches and Tennessee Smokies guides. The Tennessee Smokies guide runs 76 pages and the Delaware Beaches guide 36, with editorial pages, advertorials, and an ad index that builds itself in InDesign. After those editions I moved to the web department as a junior developer, and I worked my way up to senior web developer. Knowing the print side is why the websites follow the guides so closely.
+Their websites do the same thing, with one extra challenge: they also support the businesses advertising in those guides. Visitors need useful information without a scavenger hunt. Advertisers need accurate, attractive listings that stay online. I build and maintain the systems that make both possible.
 
-## From Drupal to WordPress
-The guides started on Drupal. I migrated them to WordPress, which was at version 5.1 at the time, and I have kept WordPress, themes, and plugins current ever since. The listings belong to paying advertisers, so the move had to keep every one of them intact.
+## The quick itinerary
+- **My role:** Web developer and server administrator, from the original builds through ongoing maintenance and audits
+- **Seven guides:** Delaware Beaches, High Country, Lake Anna, Ocean City, Tennessee Smokies, Virginia Beach, and Williamsburg
+- **Built with:** WordPress, Elementor Pro, and GeoDirectory
+- **Hosting journey:** Standalone servers → AWS → a VPS I administer
+- **Where it started:** Print publications, with a digital home for each destination
+- **Featured advertisers:** Businesses including Dollywood, Busch Gardens, and Colonial Williamsburg
 
-## Directory listings and coupons
-I added directory listings to the guides: business pages, categories, partner profiles, and area menus. I also built custom coupon layouts for each guide, so every site's coupons fit its own design.
+## Plot twist: I started with the printed pages.
 
-## Two hosting moves, kept up through the busy season
-The guides began on old standalone servers. I moved them to AWS, and later to a VPS, and I kept them running through the busy season each time, when visitors and advertisers depend on them most. The guides now run on a VPS that I administer.
+Before I was managing servers for these guides, I was designing the guides themselves.
 
-## Training, maintenance, and protection
-I trained VistaMedia staff to work with the guides. I handle the ongoing maintenance: updates, a backup before any change that is hard to undo, and checks for unknown administrator accounts and altered WordPress core files. I also audit each guide for search, accessibility, and speed, so the sites stay easy to find and easy to use.
+I served as lead designer for the 2019 Delaware Beaches and Tennessee Smokies print editions: 36 pages and 76 pages, respectively. Editorial layouts, advertorials, and an automatically generated InDesign ad index were all part of the job. So were deadlines, typography, and making a lot of information feel effortless to navigate.
 
-## The October 2026 audit pass
-In October I ran every guide through an audit tool I built, which scores search, accessibility, speed, and ease of use. Each guide got the same treatment. I updated plugins and caching settings, then added one small plugin that fixes what the theme can't: one main heading per page, a main-content landmark, link names that say where they go, a fallback page description, and an early download for the hero image. Because the plugins live outside the theme, theme updates don't undo them.
+After that, I moved into the web department as a junior developer and eventually became a senior web developer. Having worked on both sides means I understand the guides as publications *and* as websites. It's a useful perspective when the print and digital experiences need to feel like they belong to the same family.
+
+## From Drupal to WordPress, without leaving the advertisers behind
+
+The sites originally ran on Drupal. I migrated them to WordPress back when version 5.1 was current, preserving the advertiser listings along the way.
+
+Those listings aren't just content. They're part of what businesses pay for, sometimes as an upgrade to a print ad and sometimes as an added benefit of a larger placement. Losing them wasn't an option.
+
+Once the sites were on WordPress, I developed their directory experiences with business pages, categories, partner profiles, and area menus. I also built custom coupon layouts so each destination could keep its own visual identity.
+
+Seven sites, seven personalities, and thankfully no need to reinvent the wheel seven times.
+
+## Two hosting migrations. During travel season. Naturally.
+
+The guides started on aging standalone servers. I moved them to AWS and later to a VPS that I now administer.
+
+Both moves happened during busy travel seasons, when visitors were planning trips and advertisers expected their listings to be available. That meant thinking beyond the migration checklist: keeping the sites accessible, protecting content, and making sure the new environment was ready to take over.
+
+A destination guide going offline when everyone's planning a vacation? Not exactly the kind of adventure I wanted to offer.
+
+## Built to evolve means looking after what you've built.
+
+Launching a site is exciting. Keeping seven of them healthy year after year is where the real relationship begins.
+
+I handle WordPress, theme, and plugin updates; take backups before changes that are difficult to reverse; and check for suspicious administrator accounts or unexpected changes to WordPress core files. I also train VistaMedia staff so routine content updates don't require a developer on speed dial.
+
+Accessibility, search visibility, and performance are ongoing priorities, not boxes to check once and forget.
+
+## The October 2026 tune-up
+
+In October 2026, I put all seven guides through an audit tool I built to evaluate search, accessibility, performance, and usability. Then I got to work on the findings.
+
+I updated plugins and caching settings and added a small plugin to address issues the themes couldn't reliably solve: consistent main headings, a proper main-content landmark, meaningful link names, fallback page descriptions, and earlier loading for hero images.
+
+The important detail? Those fixes live outside the themes, so the next theme update doesn't wipe out the work. Because solving the same problem twice is rarely anyone's idea of a good time.
 
 [[chart]]
 
-One setting made the biggest single difference. On High Country, switching on deferred JavaScript raised the speed score from 72 to 84.
+Sometimes the biggest improvement comes from one well-chosen setting. On High Country, enabling deferred JavaScript raised its speed score from **72 to 84**.
 
 [[table]]
 
-> Speed blends a lab test with real-visitor data where Google has it. Tennessee Smokies has no real-visitor data, so its score is lab only. Virginia Beach went through the same pass and isn't in the table.
+> Performance scores combine lab testing with real-visitor data where Google provides it. Tennessee Smokies has no real-visitor data available, so its score is lab-only.
 
-## Still on my list
-- A few small accessibility items remain on some guides, mostly cookie notice colors and tiny touch targets.
-- Tennessee Smokies has the lowest speed score of the set, so it is next.
-
-## See them live
+## Explore the guides
 [[sites]]

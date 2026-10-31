@@ -36,8 +36,13 @@
       var img = new Image();
       img.alt = '';
       img.loading = 'lazy';
-      img.onload = function () { petal.style.display = 'none'; shot.appendChild(img); };
+      img.width = 960;
+      img.height = 720;
+      img.style.opacity = '0';
+      img.onload = function () { petal.style.display = 'none'; img.style.opacity = '1'; };
+      img.onerror = function () { img.remove(); };
       img.src = 'assets/shots/' + s.domain + '.webp';
+      shot.appendChild(img);
 
       var meta = el('span', 'meta');
       meta.appendChild(el('b', '', s.domain));
