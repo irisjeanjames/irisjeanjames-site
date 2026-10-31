@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Footer beam (test)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+.beam{position:relative;background:#0e2434;color:#fff;overflow:hidden;margin-top:56px}
+.beam-stage{position:relative;height:300px;max-width:1600px;margin:0 auto}
+.beam-tile{position:absolute;top:50px;left:0;width:260px;height:195px;border-radius:4px 28px 4px 28px;overflow:hidden;will-change:transform;background:#16384f}
+.beam-face,.beam-code{position:absolute;inset:0}
+.beam-face img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.beam-code{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));padding:12px 14px;font:11px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;color:#a8d4ee;overflow:hidden}
+.beam-code b{color:#f7c948;font-weight:400}
+.beam-code i{color:#b5a1ff;font-style:normal}
+.beam-code u{color:#7ad7a1;text-decoration:none}
+.beam-line{position:absolute;top:30px;bottom:30px;width:4px;margin-left:-2px;border-radius:4px;background:linear-gradient(180deg,#f7c948,#f7941d,#d9394f,#a0338f,#393d90,#3c98c6,#48ac58);box-shadow:0 0 18px 4px rgba(155,120,255,.55),0 0 60px 14px rgba(155,120,255,.25)}
+#beam-sparks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.beam-caption{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:0 20px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.beam-caption p{margin:0;font-family:var(--display);font-size:1.15rem;color:#fff;max-width:none}
+.beam-caption button{font-family:var(--display);font-weight:600;font-size:.95rem;color:#fff;background:transparent;border:2px solid #fff;border-radius:999px;min-height:44px;padding:0 18px;cursor:pointer}
+.beam-caption button:hover{background:#fff;color:#0e2434}
+@media (max-width:700px){
+  .beam-stage{height:230px}
+  .beam-tile{width:170px;height:128px;top:40px;border-radius:4px 20px 4px 20px}
+  .beam-code{font-size:8px;padding:8px 9px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34">IrisJean James</a></header>
+  <main id="main" style="min-height:40vh;padding:30px 0"><h1>Footer beam test</h1><p>Scroll down. The band below sits above the footer.</p></main>
+</div>
+
+<section class="beam" aria-label="Decorative animation: website screenshots turning into code">
+  <div class="beam-stage" id="beam-stage" aria-hidden="true">
+    <canvas id="beam-sparks"></canvas>
+    <div class="beam-line" id="beam-line"></div>
+  </div>
+  <div class="beam-caption">
+    <p>Beautiful on the outside. Brilliant behind the scenes.</p>
+    <button type="button" id="beam-pp" aria-label="Pause the animation">Pause</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  var SHOTS=['puttputt.com','coastalvirginiamag.com','beacheventsvb.com','virginiabeachhotelassociation.com','oceancity.guide','blueridgecountry.com','theroanoker.com','gowilliamsburg.com'];
+  var CODE=[
+"<b>add_action</b>( <u>'template_redirect'</u>, function () {",
+"    <b>ob_start</b>( <u>'vista_fix_markup'</u> );",
+"}, <i>-9999</i> );",
+"",
+"<b>function</b> vista_fix_markup( $html ) {",
+"    <i>// one H1 per page, please</i>",
+"    $html = <b>preg_replace</b>(",
+"        <u>'/&lt;h1/'</u>, <u>'&lt;h2'</u>, $html, <i>-1</i>",
+"    );",
+"    <b>return</b> $html;",
+"}",
+"",
+".car-panel { <i>background</i>: <u>#16384f</u>;",
+"  <i>border-radius</i>: <u>4px 40px 4px 40px</u>; }",
+"",
+"<b>wp</b> post list --post_type=attachment",
+"   --meta_key=_wp_attachment_image_alt",
+"",
+"<b>UPDATE</b> wp_postmeta <b>SET</b> meta_value = <u>'...'</u>",
+"<b>WHERE</b> meta_key = <u>'_wp_attachment_image_alt'</u>;",
+"",
+"<b>if</b> ( ! <b>is_user_logged_in</b>() ) {",
+"    <b>return</b> <i>false</i>;",
+"}"
+];
+  var stage=document.getElementById('beam-stage'), line=document.getElementById('beam-line');
+  var cv=document.getElementById('beam-sparks'), ctx=cv.getContext('2d');
+  var pp=document.getElementById('beam-pp');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tiles=[], W=0,H=0,beamX=0,tileW=260,gap=44,total=0,speed=38;
+
+  SHOTS.forEach(function(s,k){
+    var t=document.createElement('div'); t.className='beam-tile';
+    var f=document.createElement('div'); f.className='beam-face';
+    f.innerHTML='<img src="assets/shots/'+s+'.webp" alt="" loading="lazy">';
+    var c=document.createElement('div'); c.className='beam-code';
+    var start=(k*5)%CODE.length, lines=[];
+    for(var j=0;j<14;j++) lines.push(CODE[(start+j)%CODE.length]);
+    c.innerHTML=lines.join('\n');
+    t.appendChild(f); t.appendChild(c); stage.insertBefore(t,cv); tiles.push({el:t,face:f,code:c});
+  });
+
+  function size(){
+    W=stage.clientWidth; H=stage.clientHeight; beamX=Math.round(W*0.42);
+    tileW=tiles[0].el.offsetWidth; gap=Math.round(tileW*0.17); total=tiles.length*(tileW+gap);
+    line.style.left=beamX+'px';
+    cv.width=W; cv.height=H;
+  }
+  var sparks=[];
+  function spawn(){ sparks.push({x:beamX+(Math.random()*40-20),y:30+Math.random()*(H-60),vx:(Math.random()-.6)*0.6,vy:(Math.random()-.5)*0.4,a:1,r:Math.random()*1.4+.4}); }
+
+  var t0=null, off=0, running=false, last=0, visible=true, raf=0;
+  function place(){
+    tiles.forEach(function(o,k){
+      var x=((k*(tileW+gap)-off)%total+total)%total-tileW-gap;
+      // x runs from -tileW-gap .. total-tileW-gap; shift so tiles enter from the right edge
+      x=x+W*0.1;
+      o.el.style.transform='translateX('+x+'px)';
+      var left=x, right=x+tileW;
+      var showFace=Math.max(0,Math.min(tileW,beamX-left)); // px of tile left of beam
+      // face visible to the RIGHT of the beam; code visible to the LEFT of beam
+      o.face.style.clipPath='inset(0 0 0 '+showFace+'px)';
+      o.code.style.clipPath='inset(0 '+Math.max(0,Math.min(tileW,right-beamX))+'px 0 0)';
+    });
+  }
+  function frame(ts){
+    raf=0;
+    if(!running||!visible||document.hidden) return;
+    if(!last) last=ts; var dt=Math.min(.05,(ts-last)/1000); last=ts;
+    off+=speed*dt; place();
+    ctx.clearRect(0,0,W,H);
+    if(sparks.length<70 && Math.random()<.6) spawn();
+    sparks=sparks.filter(function(p){p.x+=p.vx;p.y+=p.vy;p.a-=.008;return p.a>0;});
+    sparks.forEach(function(p){ctx.globalAlpha=Math.max(0,p.a)*.8;ctx.fillStyle='#c7b8ff';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();});
+    raf=requestAnimationFrame(frame);
+  }
+  function kick(){ if(!raf && running && visible) { last=0; raf=requestAnimationFrame(frame);} }
+  function setRunning(r){
+    running=r; pp.textContent=r?'Pause':'Play';
+    pp.setAttribute('aria-label',r?'Pause the animation':'Play the animation');
+    if(r) kick();
+  }
+  pp.onclick=function(){setRunning(!running);};
+  new IntersectionObserver(function(e){visible=e[0].isIntersecting;kick();}).observe(stage);
+  document.addEventListener('visibilitychange',kick);
+  addEventListener('resize',function(){size();place();});
+  size(); off=total*0.35; place();
+  setRunning(!reduce);
+})();
+</script>
+</body>
+</html>

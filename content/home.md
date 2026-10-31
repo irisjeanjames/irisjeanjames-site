@@ -7,19 +7,13 @@ tagline: Beautiful by design. Brilliant behind the scenes.
 ---
 
 ## Hero
-Hi, I'm IrisJean.
+Hi, I’m IrisJean.
 
-I build websites, solve problems, and occasionally convince technology to cooperate.
+I make websites look good, work better, and evolve.
 
-With more than 12 years in web development and a background in design that goes back considerably further, I've learned something important: a great website isn't just about how it looks.
+With 32+ years of design experience and 12+ years in web development and technical operations, I blend creative thinking with technical problem-solving to build websites that are beautiful on the outside and brilliant behind the scenes.
 
-It's about what happens when someone clicks a button, when traffic spikes, when a server decides to have a personality crisis, or when a business needs to grow beyond what anyone originally imagined.
-
-That's where I come in.
-
-I bring together design, development, infrastructure, and a healthy amount of curiosity to create digital experiences that aren't just built to launch.
-
-**They're built to evolve.**
+**Built to evolve. Not just survive the next update.**
 
 ## Buttons
 - Explore My Work
@@ -68,7 +62,7 @@ I helped transform the magazine's digital presence into a flexible publishing pl
 And because websites are never really finished, I continue improving accessibility, performance, and the systems keeping everything running.
 
 ## Card: Putt-Putt Fun Center
-**One network. Two dozen locations. Zero need for two dozen headaches.**
+**Two dozen locations. One network. Zero headaches.**
 
 Building a website for a franchise network sounds straightforward until every location needs its own hours, pricing, events, menus, and personality.
 

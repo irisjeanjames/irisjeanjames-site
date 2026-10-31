@@ -1,7 +1,7 @@
 ---
 title: About
-description: IrisJean James has spent about 20 years in print, design, and web. Read how she works and where she's worked, from newspaper art director to WordPress systems engineer.
-intro: I've been making things for print since I was 13, and I've spent about 20 years turning that into a career in design, development, and keeping production websites online.
+description: IrisJean James has spent more than 32 years in design and more than 12 in web development. Read how she works and where she's worked, from newspaper art director to WordPress systems engineer.
+intro: I've been making things for print since I was 13, and I've spent 32+ years in design and 12+ in web development, keeping production websites online.
 ---
 
 ## How I Work
