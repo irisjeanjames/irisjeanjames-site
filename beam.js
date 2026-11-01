@@ -1,7 +1,13 @@
 (function(){
+  /* Builds its own decorative band just above the footer. Pages only need <script src=".../beam.js"></script>. */
+  var foot=document.querySelector('footer'); if(!foot) return;
+  var me=document.currentScript, ROOT=((me&&me.getAttribute('src'))||'beam.js').replace(/beam\.js.*$/,'');
+  var SHOTS="puttputt.com,coastalvirginiamag.com,beacheventsvb.com,virginiabeachhotelassociation.com,oceancity.guide,blueridgecountry.com,theroanoker.com,gowilliamsburg.com".split(',');
+  var sec=document.createElement('section'); sec.className='beam';
+  sec.setAttribute('aria-label', "Decorative animation: website screenshots turning into code");
+  sec.innerHTML="\n  <div class=\"beam-stage\" id=\"beam-stage\" aria-hidden=\"true\">\n    <canvas id=\"beam-sparks\"></canvas>\n    <div class=\"beam-line\" id=\"beam-line\"></div>\n  </div>\n  <div class=\"beam-caption\">\n    \n    <button type=\"button\" id=\"beam-pp\" aria-label=\"Pause the animation\">Pause</button>\n  </div>\n";
+  var holder=foot.closest('.wrap')||foot; holder.parentNode.insertBefore(sec, holder);
 
-  var sec=document.querySelector('.beam'); if(!sec) return;
-  var SHOTS=(sec.getAttribute('data-shots')||'').split(',').filter(Boolean), ROOT=sec.getAttribute('data-root')||'';
   var CODE=[
 "<b>add_action</b>( <u>'template_redirect'</u>, function () {",
 "    <b>ob_start</b>( <u>'vista_fix_markup'</u> );",
