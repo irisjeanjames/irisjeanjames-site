@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vista Audit | IrisJean James</title>
+<meta name="description" content="A website audit tool I built that turns technical scores into one letter grade and a short list of fixes, written in plain language.">
+<link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+.gradebar{margin:22px 0 8px;max-width:760px}
+.gradebar .gb-bar{display:flex;gap:4px;height:46px}
+.gradebar .gb-seg{border-radius:6px;background:var(--c)}
+.gradebar .gb-seg:first-child{border-radius:6px 22px 6px 6px}
+.gradebar .gb-seg:last-child{border-radius:6px 6px 22px 6px}
+.gradebar ul.gb-key{list-style:none;padding:0;margin:14px 0 0;max-width:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 18px}
+.gradebar .gb-key li{margin:0;padding-top:8px;border-top:5px solid var(--c);line-height:1.35}
+.gradebar .gb-key b{display:block;font:400 1.1rem var(--display);color:var(--ink)}
+.gradebar .gb-key span{font-size:.95rem;color:var(--ink-soft)}
+@keyframes gblift{0%,35%,100%{transform:scaleY(1);filter:none}12%,24%{transform:scaleY(1.4);filter:brightness(1.1)}}
+.gradebar.anim .gb-seg{animation:gblift 4.8s ease-in-out infinite}
+.gradebar.anim .gb-seg:nth-child(2){animation-delay:1.2s}
+.gradebar.anim .gb-seg:nth-child(3){animation-delay:2.4s}
+.gradebar.anim .gb-seg:nth-child(4){animation-delay:3.6s}
+@media (prefers-reduced-motion:reduce){.gradebar .gb-seg{animation:none}}
+.prose ul.cards.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:800px){.prose ul.cards.three{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
+</style>
+</head>
+<body>
+<script src="../../intro.js"></script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../"><img src="../../assets/logo.svg" alt="" width="34" height="34">IrisJean James</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../../#work">Sites</a>
+      <a href="../../#cases">Case studies</a>
+      <a href="../../about/">About</a>
+      <a href="../../#contact">Contact</a>
+    </nav>
+  </header>
+  <main id="main" style="--c:#953189">
+    <a class="crumb" href="../../#cases">Back to the portfolio</a>
+    <div class="page-hero">
+      <h1>Vista Audit</h1>
+      <p class="lede">A website audit tool that turns a pile of technical scores into one grade and a short list of fixes.</p>
+    </div>
+
+    <div class="prose">
+      <ul class="stats" aria-label="Key numbers">
+        <li class="stat"><b>A+ to F</b><span>one letter grade for the whole site</span></li>
+        <li class="stat"><b>25</b><span>pages sampled across the sitemap, plus the homepage</span></li>
+        <li class="stat"><b>3</b><span>speed runs after a warm-up; the median counts</span></li>
+      </ul>
+      <nav class="jump" aria-label="On this page">
+        <p>Jump to</p>
+        <ul><li><a href="#j-quick-check-in">Quick Break Down</a></li><li><a href="#j-the-problem">The problem</a></li><li><a href="#j-where-it-started">Where it started</a></li><li><a href="#j-what-i-built">What I built</a></li><li><a href="#j-more-than-lighthouse">More than Lighthouse</a></li><li><a href="#j-how-i-keep-it-honest">How I keep it honest</a></li><li><a href="#j-how-i-use-it">How I use it</a></li><li><a href="#j-the-proof">The proof</a></li><li><a href="#j-under-the-hood">Under the hood</a></li></ul>
+      </nav>
+
+      <section class="factsec">
+        <h2 id="j-quick-check-in">The quick break down</h2>
+        <dl class="facts">
+        <div><dt>My role</dt><dd>I designed and built it myself</dd></div>
+        <div><dt>Built for</dt><dd>My work with VistaMedia, Inc. and the other sites I manage. It’s my own tool.</dd></div>
+        <div><dt>Runs on</dt><dd>My own computer, using only what any visitor or search engine can see</dd></div>
+        <div><dt>Output</dt><dd>A branded, plain-language report, exported to PDF</dd></div>
+        </dl>
+      </section>
+
+      <section>
+        <h2 id="j-the-problem">The problem</h2>
+        <p>I look after about 120 WordPress websites for VistaMedia, and I manage sites outside of those as well. I needed a fast, repeatable way to see which sites may need assistance to hit better performance standards that wasn't solely reliant on Lighthouse. I also wanted plain language explanations that non-technical people could understand.</p>
+        <p>Lighthouse is excellent for what it does, but it tests one page and hands back separate scores meant for developers. Client-facing audit services gave me a grade, but I couldn’t control what they measured, or I was paying for a service I could run myself. I needed something I could control, and customize to each site's unique needs.</p>
+      </section>
+
+      <section>
+        <h2 id="j-where-it-started">Where it started</h2>
+        <p>Putt-Putt was the start of it. The audit work for the <a href="../putt-putt/">Putt-Putt Fun Center</a> network was the first version of this tool from there it has grown and been tweaked to produce reports that are both actionable and easy to understand.</p>
+      </section>
+
+      <section>
+        <h2 id="j-what-i-built">What I built</h2>
+        <p>Currently branded as IJ's Audit, this is a Node.js tool to review a site’s public pages and produces a branded, plain-language report with a single letter grade from A+ to F. It runs on my own computer, needs no logins to the site, and uses only what any visitor or search engine can see; meaning we could run it as a sales tool in addition to an internal actionable report.</p>
+        <p>Each report breaks the grade into four sections:</p>
+        <figure class="gradebar" data-motion>
+          <div class="gb-bar" aria-hidden="true"><span class="gb-seg" style="--c:#393d90;flex:40"></span><span class="gb-seg" style="--c:#48ac58;flex:20"></span><span class="gb-seg" style="--c:#3c98c6;flex:20"></span><span class="gb-seg" style="--c:#f7941d;flex:5"></span></div>
+          <ul class="gb-key">
+            <li style="--c:#393d90"><b>Search</b><span>The largest share, nearly half of the grade</span></li>
+            <li style="--c:#48ac58"><b>Accessibility</b><span>About a quarter</span></li>
+            <li style="--c:#3c98c6"><b>Speed</b><span>About a quarter</span></li>
+            <li style="--c:#f7941d"><b>Ease of use</b><span>A small slice</span></li>
+          </ul>
+        </figure>
+        <p>Every finding is ranked by priority and written for a business owner, not a developer.</p>
+      </section>
+
+      <section>
+        <h2 id="j-more-than-lighthouse">Why it’s more than a Lighthouse score</h2>
+        <p>I use Lighthouse for what it does best, accessibility and speed, then add everything it doesn’t look at.</p>
+        <ul class="cards three">
+          <li><strong>Beyond the homepage</strong> It checks the homepage and up to 25 pages sampled across the sitemap, so one good page can’t hide a bad site.</li>
+          <li><strong>Steadier speed results</strong> It runs the speed test three times after a warm-up and grades the median, so one unlucky run doesn’t decide the score.</li>
+          <li><strong>Real visitors, not just a lab</strong> Where Google has real-visitor data for a site, it counts for half of the Speed score. A site can score badly in the lab and still be fast for the people using it, and the report shows both.</li>
+          <li><strong>AI search</strong> It checks that the homepage has readable text and that tools like ChatGPT, Claude and Perplexity are allowed to read it.</li>
+          <li><strong>The basics behind the site</strong> It reviews structured business details, the sitemap, hosting and caching, and whether the domain is protected against email spoofing.</li>
+          <li><strong>Progress over time</strong> Every run is saved, and each report shows how the site has changed since its first audit.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="j-how-i-keep-it-honest">How I keep it honest</h2>
+        <ul class="cards">
+          <li><strong>The grade isn't about making a site look good</strong> A run weighs the actual impact of each issue on the site's performance and user experience, not just its appearance.</li>
+          <li><strong>Rules are versioned</strong> Each result records which scoring rules it used, so I never compare a change in the rules to a change in the site.</li>
+          <li><strong>Accessibility is described accurately</strong> WCAG is not a one-size-fits-all standard, and the report makes that clear. The report explains where the accessibility gaps are and how to fix them in plain language.</li>
+          <li><strong>The wording is part of the product</strong> Reports say “search description” and “preferred address,” never tag names or crawler jargon. The backend reporting keeps the necessary technical details for reference as needed when remediation is requested.</li>
+          <li><strong>White Label? Yup</strong> I'm building out a version that is allowing my contracted clients like VistaMedia an opportunity to utilize this as a white-labeled service for their clients.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="j-how-i-use-it">How I use it</h2>
+        <p>I audit a site, fix what the report ranks highest, audit again, and mark the site as improved. The before-and-after grades show the result without needing a conversation about technical details.</p>
+      </section>
+
+      <section>
+        <h2 id="j-the-proof">The proof</h2>
+        <p>Outer Banks Coastal Life improved the most, from a D (65.1) to an A (94.4), a gain of 29.3 points. Virginia Beach Guide was next, from a D+ (68.8) to an A (95.6), up 26.8.</p>
+        <table class="grades">
+          <caption>Biggest grade gains, first audit to latest audit</caption>
+          <thead><tr><th scope="col">Site</th><th scope="col" class="n">First audit</th><th scope="col" class="n">Latest audit</th><th scope="col" class="n">Gain</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">outerbankscoastallife.com</th><td class="n">D 65.1</td><td class="n">A 94.4</td><td class="n">+29.3</td></tr>
+            <tr><th scope="row">virginiabeach.guide</th><td class="n">D+ 68.8</td><td class="n">A 95.6</td><td class="n">+26.8</td></tr>
+            <tr><th scope="row">covaideahouse.com</th><td class="n">D+ 67.0</td><td class="n">A- 91.0</td><td class="n">+24.0</td></tr>
+            <tr><th scope="row">lynchburgliving.com</th><td class="n">D+ 69.2</td><td class="n">A- 92.9</td><td class="n">+23.7</td></tr>
+            <tr><th scope="row">delawarebeaches.guide</th><td class="n">C 73.6</td><td class="n">A+ 97.0</td><td class="n">+23.4</td></tr>
+            <tr><th scope="row">gowilliamsburg.com</th><td class="n">C 74.9</td><td class="n">A+ 97.5</td><td class="n">+22.6</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2 id="j-under-the-hood">Under the hood</h2>
+        <p>Node.js, Lighthouse, Chrome, Puppeteer, and the Google Chrome UX Report API. Reports are generated as static HTML with print styles and exported to PDF.</p>
+      </section>
+    </div>
+
+    <nav class="pager" aria-label="Case studies"><a href="../vbha/">Previous: Virginia Beach Hotel Association</a><span></span></nav>
+  </main>
+</div>
+<div class="wrap">
+  <footer>
+    <p>&copy; 2026 IrisJean James</p>
+    <p class="closing">Built to Evolve. Because standing still was never really my thing.</p>
+    <p>Sites shown with permission from their owners. Logos and content belong to them.</p>
+  </footer>
+</div>
+<script src="../../motion.js"></script>
+<script src="../../beam.js"></script>
+</body>
+</html>

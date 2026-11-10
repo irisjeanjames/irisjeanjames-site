@@ -1,3 +1,5 @@
+/* Intro animation script, plays on first visit */
+
 (function(){
   /* Runs first inside <body>: decides whether to play the intro, and if so adds the overlay before anything paints. */
   var root=document.documentElement;
