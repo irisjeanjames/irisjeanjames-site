@@ -4,9 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Virginia Beach Hotel Association | IrisJean James</title>
-<meta name="description" content="A modern WordPress site that a hotel association can manage on its own, with member directories, event sign-ups, and job postings.">
+<meta name="description" content="A reorganized WordPress site for a hotel association, with a member dashboard where hotels log in to add their own jobs and events.">
 <link rel="icon" href="../../assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../../styles.css">
+<style>
+.dnew,.dplus{transform-box:fill-box;transform-origin:center}
+@keyframes dashin{0%,8%{opacity:0;transform:translateY(-8px)}20%,80%{opacity:1;transform:none}92%,100%{opacity:0;transform:translateY(-8px)}}
+@keyframes plusp{0%,12%,100%{transform:scale(1)}5%{transform:scale(1.22)}}
+.anim .dnew{animation:dashin 6s ease-in-out infinite}
+.anim .dplus{animation:plusp 6s ease-in-out infinite}
+.anim .dnew.d2,.anim .dplus.d2{animation-delay:1.8s}
+</style>
 </head>
 <body>
 <script src="../../intro.js"></script>
@@ -16,17 +24,17 @@
     <a class="brand" href="../../"><img src="../../assets/logo.svg" alt="" width="34" height="34">IrisJean James</a>
     <nav class="nav" aria-label="Main">
       <a href="../../#work">Sites</a>
-      <a href="../../#cases">Case studies</a>
+      <a href="../">Case studies</a>
       <a href="../../about/">About</a>
       <a href="../../#contact">Contact</a>
     </nav>
   </header>
-  <main id="main" style="--c:#393d90">
-    <a class="crumb" href="../../#cases">Back to the portfolio</a>
+  <main id="main" style="--c:#953189">
+    <a class="crumb" href="../">All case studies</a>
     <div class="page-hero has-shot">
       <div>
         <h1>Virginia Beach Hotel Association</h1>
-        <p class="lede">A better website for Virginia Beach hospitality, and a lot fewer reasons for the association to call a developer just to update a page.</p>
+        <p class="lede">A better-organized website for Virginia Beach hospitality, with a member dashboard where hotels log in and add their own jobs and events.</p>
     
       </div>
       <figure class="heroshot"><div class="frame"><img src="../../assets/shots/virginiabeachhotelassociation.com.webp" alt="The Virginia Beach Hotel Association home page: a beachfront row of hotels and a “View all hotels” button" width="1600" height="1200"></div></figure>
@@ -42,9 +50,9 @@
         <ul><li><a href="#j-overview">Overview</a></li><li><a href="#j-quick-check-in">Quick check-in</a></li><li><a href="#j-the-problem">The problem</a></li><li><a href="#j-the-new-site">The new site</a></li><li><a href="#j-accessibility">Accessibility</a></li><li><a href="#j-the-result">The result</a></li><li><a href="#j-see-it-live">See it live</a></li></ul>
       </nav>
       <section>
-                <h2 id="j-overview">Giving the keys back to the people who need them</h2>
+                <h2 id="j-overview">Easier to find. Easier to add to.</h2>
         <div class="split">
-          <div class="deco" data-motion><svg viewBox="0 0 320 180" width="320" height="180" aria-hidden="true" focusable="false"><g class="keyg"><g fill="none" stroke="#393d90" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><circle cx="70" cy="90" r="46"/><path d="M116 90H292M246 90v34M276 90v26"/></g><circle cx="70" cy="90" r="14" fill="#f7941d"/></g></svg></div>
+          <div class="deco" data-motion><svg viewBox="0 0 320 210" width="320" height="210" aria-hidden="true" focusable="false"><rect x="8" y="8" width="304" height="196" rx="14" fill="#fff"/><path d="M8 44V22a14 14 0 0 1 14-14H298a14 14 0 0 1 14 14V44Z" fill="#eef3f7"/><rect x="8" y="8" width="304" height="196" rx="14" fill="none" stroke="#393d90" stroke-width="5"/><path d="M8 44H312" stroke="#393d90" stroke-width="3"/><circle cx="28" cy="26" r="4" fill="#9db3c2"/><circle cx="42" cy="26" r="4" fill="#9db3c2"/><circle cx="56" cy="26" r="4" fill="#9db3c2"/><circle cx="290" cy="26" r="10" fill="#f7941d"/><circle cx="290" cy="23" r="3.5" fill="#fff"/><path d="M283 33a7 6 0 0 1 14 0" fill="#fff"/><rect x="22" y="58" width="128" height="134" rx="8" fill="#eef3f7"/><text x="34" y="81" style="font:700 13px var(--display,serif)" fill="#1a405a">Jobs</text><g class="dplus d1"><circle cx="132" cy="76" r="11" fill="#f7941d"/><path d="M132 70v12M126 76h12" stroke="#1a405a" stroke-width="2.5" stroke-linecap="round"/></g><rect x="34" y="94" width="104" height="22" rx="5" fill="#fff"/><rect x="42" y="102" width="62" height="5" rx="2.5" fill="#9db3c2"/><rect x="34" y="122" width="104" height="22" rx="5" fill="#fff"/><rect x="42" y="130" width="46" height="5" rx="2.5" fill="#9db3c2"/><g class="dnew d1"><rect x="34" y="150" width="104" height="22" rx="5" fill="#fff" stroke="#f7941d" stroke-width="2.5"/><rect x="42" y="158" width="70" height="5" rx="2.5" fill="#393d90"/></g><rect x="170" y="58" width="128" height="134" rx="8" fill="#eef3f7"/><text x="182" y="81" style="font:700 13px var(--display,serif)" fill="#1a405a">Events</text><g class="dplus d2"><circle cx="280" cy="76" r="11" fill="#f7941d"/><path d="M280 70v12M274 76h12" stroke="#1a405a" stroke-width="2.5" stroke-linecap="round"/></g><rect x="182" y="94" width="104" height="22" rx="5" fill="#fff"/><rect x="190" y="102" width="62" height="5" rx="2.5" fill="#9db3c2"/><rect x="182" y="122" width="104" height="22" rx="5" fill="#fff"/><rect x="190" y="130" width="46" height="5" rx="2.5" fill="#9db3c2"/><g class="dnew d2"><rect x="182" y="150" width="104" height="22" rx="5" fill="#fff" stroke="#f7941d" stroke-width="2.5"/><rect x="190" y="158" width="70" height="5" rx="2.5" fill="#393d90"/></g></svg></div>
           <div>
             <p>The Virginia Beach Hotel Association supports its member hotels and helps visitors find their way around the city. Its website needs to serve two very different audiences: travelers planning a stay and hospitality professionals connecting with one another.</p>
           
@@ -57,16 +65,20 @@
         <dl class="facts">
         <div><dt>My role</dt><dd>Helped build the original site in 2019. Updated the technology and rebuilt in 2022.</dd></div>
         <div><dt>Client</dt><dd>Virginia Beach Hotel Association</dd></div>
-        <div><dt>Built with</dt><dd>WordPress, plus tools for search, event registration, job postings, and member directories</dd></div>
-        <div><dt>Handoff</dt><dd>One-on-one training and video tutorials</dd></div>
+        <div><dt>Built with</dt><dd>WordPress, with a member dashboard, search, event registration, job postings, and member directories</dd></div>
+        <div><dt>Members</dt><dd>Log in to add their own jobs and events</dd></div>
         </dl>
       </section>
 
       <section>
         <h2 id="j-the-problem">The problem: difficult to use and not intuitive</h2>
-        <p>The old website was outdated, difficult to use on a phone, and complicated to find information. Even routine content information was buried deep within the site, which often left business and end-users frustrated and unable to find what they needed.</p>
-        <p>Reorganizing the site structure and improving the navigation made it much easier for visitors to find what they needed, whether they were looking for hotel information, events, or job opportunities, and a strong membor portal allowed hotels the opportunity to add their own job opportunities and events with ease.</p>
-        <p>While the original plan was to give VBHA the ability to update, their team loved working with us so much we set up a contract for ongoing text updates. The ease of having updates handled by us meant they could focus on their core mission, although the functionality for easy updates remains a core part of the site.</p>
+        <p>The old website was outdated, difficult to use on a phone, and hard to navigate. Information was buried deep within the site, which left visitors and member hotels frustrated and unable to find what they needed.</p>
+      </section>
+
+      <section>
+        <h2 id="j-the-new-site">The new site: organized around what people came to do</h2>
+        <p>I reorganized the site structure and rebuilt the navigation around what people are actually looking for: hotel information, events, and job opportunities.</p>
+        <p>Then I built a member dashboard. Member hotels log in and add their own jobs and events with ease.</p>
       </section>
 
       <section>
@@ -75,9 +87,9 @@
       </section>
 
       <section>
-        <h2 id="j-the-result">The result: more independence, less friction</h2>
-        <p>The association can now manage its own content. Visitors have a clearer path to planning a Virginia Beach trip, and members have a central place to connect.</p>
-        <p>A website should make people’s jobs easier. In this case, that included making sure they didn’t need me for every little thing.</p>
+        <h2 id="j-the-result">The result: a clearer path in, an easier way to contribute</h2>
+        <p>Visitors have a clearer path to planning a Virginia Beach trip, whether they’re looking for a hotel, an event, or a job. Member hotels have a central place to connect, and a dashboard where they add their own listings.</p>
+        <p>A website should make people’s jobs easier. Here, that meant organizing the information so it’s easy to find, and giving members a simple way to add their own.</p>
       </section>
 
       <section>
@@ -88,7 +100,7 @@
       </section>
     </div>
 
-    <nav class="pager" aria-label="Case studies"><a href="../beach-events/">Previous: Beach Events</a><span></span></nav>
+    <nav class="pager" aria-label="Case studies"><a href="../beach-events/">Previous: Beach Events</a><a href="../custom-audit/">Next: Second Look</a></nav>
   </main>
 </div>
 <div class="wrap">

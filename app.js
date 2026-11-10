@@ -20,12 +20,14 @@
       shown++;
       var g = data.groups[s.group];
       var li = el('li');
-      var a = el('a', 'tile');
-      a.href = 'https://' + s.domain;
-      a.target = '_blank';
-      a.rel = 'noopener';
+      var a = el(s.case ? 'div' : 'a', s.case ? 'tile has-case' : 'tile');
+      if (!s.case) {
+        a.href = 'https://' + s.domain;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.setAttribute('aria-label', s.domain + ', ' + g.label + ' (opens in a new tab)');
+      }
       a.style.setProperty('--c', g.color);
-      a.setAttribute('aria-label', s.domain + ', ' + g.label + ' (opens in a new tab)');
 
       var shot = el('span', 'shot');
       var petal = el('span', 'petal' + (g.darkText ? ' dark' : ''));
@@ -53,6 +55,20 @@
 
       a.appendChild(shot);
       a.appendChild(meta);
+      if (s.case) {
+        var act = el('span', 'tile-actions');
+        var cl = el('a', 'tile-btn primary', 'Case study');
+        cl.href = 'work/' + s.case + '/';
+        cl.appendChild(el('span', 'sr', ': ' + s.domain));
+        var lv = el('a', 'tile-btn', 'View live');
+        lv.href = 'https://' + s.domain;
+        lv.target = '_blank';
+        lv.rel = 'noopener';
+        lv.appendChild(el('span', 'sr', ': ' + s.domain + ' (opens in a new tab)'));
+        act.appendChild(cl);
+        act.appendChild(lv);
+        a.appendChild(act);
+      }
       li.appendChild(a);
       wall.appendChild(li);
     });

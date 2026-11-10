@@ -270,64 +270,66 @@ footer .closing{font-style:italic}
 @media (prefers-reduced-motion:reduce){.fig img{transition:none}}
 
 /* carousel */
-
 .car-wrap{position:relative;margin-top:1.4rem}
-.car-stage{position:relative;aspect-ratio:16/9;min-height:440px;max-height:640px;width:100%;overflow:hidden;background:var(--ink);border-radius:4px 64px 4px 64px;isolation:isolate}
-.car-slide{position:absolute;inset:0;visibility:hidden;opacity:0;transition:opacity .8s ease,visibility 0s linear .8s}
-.car-slide.on{visibility:visible;opacity:1;transition:opacity .8s ease,visibility 0s}
-.car-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;transform:scale(1.06);transition:transform 6s ease-out}
-.car-slide.on img{transform:scale(1)}
-.car-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,36,52,.78) 0%,rgba(14,36,52,.35) 42%,rgba(14,36,52,0) 70%)}
-
-.car-panel{position:absolute;z-index:2;left:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,40px);width:min(460px,calc(100% - 32px));background:#16384f;color:#fff;border-radius:4px 40px 4px 40px;padding:26px 28px 24px;box-shadow:0 18px 40px rgba(14,36,52,.35)}
-.car-panel .car-kick{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 .5rem;color:#cfe3f0}
-.car-panel h3{font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.12;color:#fff;margin-bottom:.6rem}
-.car-panel p.car-d{margin:0 0 1.1rem;font-size:1rem;line-height:1.55;color:#fff}
-.car-panel .car-row{display:flex;flex-wrap:wrap;gap:10px}
-.car-panel .btn{border-color:#fff;color:#fff;padding:10px 18px;font-size:.95rem}
-.car-panel .btn.solid{background:#fff;color:#16384f}
-.car-panel .btn:hover{background:var(--mist);color:#16384f}
-
-.car-thumbs{position:absolute;z-index:2;right:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);width:270px;display:flex;flex-direction:column;gap:6px;margin:0;padding:10px;list-style:none;background:rgba(14,36,52,.84);backdrop-filter:blur(6px);border-radius:4px 34px 4px 34px}
-.car-thumbs li{position:relative;z-index:1;margin:0}
-.car-thumbs li.car-hl-li{position:absolute;inset:0;z-index:0;pointer-events:none}
-.car-hl{position:absolute;left:0;top:0;width:0;height:0;background:#fff;border-top:5px solid var(--c,#fff);border-radius:4px 24px 4px 24px;box-shadow:0 6px 26px 6px rgba(0,0,0,.25);opacity:0;transition:transform .35s cubic-bezier(.4,0,.2,1),width .35s,height .35s,opacity .25s,border-color .35s}
-.car-hl.on{opacity:1}
-.car-thumbs button{display:flex;align-items:center;gap:12px;width:100%;padding:8px;border:0;background:transparent;color:#fff;text-align:left;cursor:pointer;border-radius:4px 20px 4px 20px;font:600 .98rem/1.2 var(--display);transition:color .3s}
-.car-thumbs button img{width:76px;height:57px;flex:none;object-fit:cover;object-position:top left;border-radius:4px 14px 4px 14px}
-.car-thumbs li.hot button{color:#16384f}
-.car-thumbs button:focus-visible{outline:3px solid #fff;outline-offset:-3px}
-.car-thumbs li.hot button:focus-visible{outline-color:#393d90}
-
-.car-bar{display:flex;align-items:center;gap:14px;margin-top:16px}
-.car-bar button{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:999px;min-width:44px;min-height:44px;padding:0 16px;cursor:pointer}
-.car-bar button:hover{background:var(--mist)}
-.car-count{font-family:var(--display);font-variant-numeric:lining-nums;min-width:4.5ch}
-.car-prog{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
-.car-prog i{display:block;height:100%;width:0;background:var(--ink)}
-.car-prog i.run{animation:carfill var(--dur,7s) linear forwards}
-@keyframes carfill{to{width:100%}}
-
-@media (max-width:800px){
-  .car-stage{aspect-ratio:auto;min-height:0;max-height:none;height:auto;border-radius:4px 40px 4px 40px;background:#16384f}
-  .car-slide{position:relative;display:none;visibility:visible;opacity:1}
-  .car-slide.on{display:block}
-  .car-slide img{position:relative;height:auto;aspect-ratio:4/3;transform:none}
-  .car-slide::after{display:none}
-  .car-panel{position:relative;left:auto;bottom:auto;width:auto;border-radius:0;box-shadow:none;padding:22px 20px}
-  .car-thumbs{position:relative;right:auto;top:auto;transform:none;flex-direction:row;gap:2px;padding:6px 10px 20px;justify-content:center;width:auto;background:transparent;backdrop-filter:none;border-radius:0}
-  .car-thumbs button{width:auto;padding:6px;border-radius:4px 12px 4px 12px}
-  .car-thumbs button img{width:46px;height:35px}
-  .car-rail-name{display:none}
-  .car-hl{border-radius:4px 14px 4px 14px}
-  .car-panel .car-row{flex-direction:column}
-  .car-panel .btn{text-align:center}
+.car-stage{position:relative;overflow:hidden;height:clamp(480px,46vw,560px);border-radius:4px 64px 4px 64px;background:#16384f;touch-action:pan-y}
+.car-track{display:flex;height:100%;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.car-slide{flex:0 0 100%;position:relative;overflow:hidden;background:var(--d);display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.car-band{position:absolute;left:-10%;top:0;bottom:0;width:58%;background:rgba(0,0,0,.2);transform:skewX(7deg);transform-origin:0 100%;pointer-events:none}
+.car-panel{position:relative;z-index:2;grid-column:1;max-width:640px;padding:48px 24px 84px clamp(76px,9vw,120px)}
+.car-kick{margin:0 0 .6rem;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.car-panel h3{margin:0 0 .7rem;font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.12;color:#fff}
+.car-d{margin:0 0 1.3rem;font-size:1.02rem;line-height:1.55;color:#fff}
+.car-row{display:flex;flex-wrap:wrap;gap:10px}
+.car-slide .btn{border-color:#fff;color:#fff;padding:10px 18px;font-size:.95rem}
+.car-slide .btn.solid{background:#fff;color:var(--d)}
+.car-slide .btn:hover{background:var(--mist);color:var(--d)}
+.car-slide .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.car-art{position:relative;z-index:1;grid-column:2;justify-self:center;width:min(420px,78%);margin-right:clamp(24px,5vw,64px)}
+.car-card{position:relative;isolation:isolate;aspect-ratio:4/3;transform:skewX(-10deg);border-radius:28px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.car-card::before,.car-card::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:28px;background:var(--c);opacity:.4}
+.car-card::after{transform:translate(64px,-16px)}
+.car-card::before{transform:translate(32px,-32px)}
+.car-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;border-radius:28px}
+.car-arrow{position:absolute;z-index:5;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:48px;height:48px;padding:0;border:2px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(0,0,0,.25);color:#fff;cursor:pointer;transition:background .2s,border-color .2s}
+.car-prev{left:14px}
+.car-next{right:14px}
+.car-arrow:hover{background:rgba(0,0,0,.45);border-color:#fff}
+.car-arrow:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.car-trail{position:absolute;z-index:5;left:50%;bottom:18px;transform:translateX(-50%);width:min(60%,520px);display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:0;padding:0;list-style:none}
+.car-trail li{margin:0}
+.car-trail button{width:100%;min-height:44px;padding:10px 0 6px;border:0;border-top:3px solid rgba(255,255,255,.45);background:transparent;color:#fff;font:600 1rem var(--display);font-variant-numeric:lining-nums;cursor:pointer}
+.car-trail button:hover{border-top-color:rgba(255,255,255,.85)}
+.car-trail button[aria-current]{border-top-color:#fff}
+.car-trail button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@keyframes carband{from{transform:translateX(-100%) skewX(7deg);opacity:0}}
+@keyframes carup{from{opacity:0;transform:translateY(24px)}}
+@keyframes carart{from{opacity:0;transform:translateX(70px)}}
+@media (prefers-reduced-motion:no-preference){
+  .car-slide.on .car-band{animation:carband .6s ease both}
+  .car-slide.on .car-kick{animation:carup .6s ease both}
+  .car-slide.on .car-panel h3{animation:carup .6s .08s ease both}
+  .car-slide.on .car-d{animation:carup .6s .16s ease both}
+  .car-slide.on .car-row{animation:carup .6s .24s ease both}
+  .car-slide.on .car-art{animation:carart .7s .1s cubic-bezier(.2,.8,.2,1) both}
 }
 @media (prefers-reduced-motion:reduce){
-  .car-hl,.car-thumbs button{transition:none}
-  .car-slide,.car-slide.on{transition:none}
-  .car-slide img,.car-slide.on img{transition:none;transform:none}
-  .car-prog i.run{animation:none}
+  .car-track,.car-arrow{transition:none}
+}
+@media (max-width:800px){
+  .car-stage{height:auto;border-radius:4px 40px 4px 40px}
+  .car-track{height:auto;align-items:stretch}
+  .car-slide{display:flex;flex-direction:column;padding-bottom:76px}
+  .car-band{left:0;right:0;top:auto;bottom:0;width:auto;height:62%;transform:none}
+  .car-art{order:-1;width:min(290px,72%);margin:34px auto 8px;justify-self:auto}
+  .car-card{border-radius:20px}
+  .car-card::before,.car-card::after,.car-card img{border-radius:20px}
+  .car-card::after{transform:translate(40px,-10px)}
+  .car-card::before{transform:translate(20px,-20px)}
+  .car-panel{padding:20px 22px 8px;max-width:none}
+  .car-row{flex-direction:column}
+  .car-slide .btn{text-align:center}
+  .car-arrow{display:none}
+  .car-trail{bottom:10px;width:92%}
 }
 
 /* footer beam */
@@ -439,3 +441,13 @@ footer .closing{font-style:italic}
 .how .feature h3{column-span:all;margin-bottom:.6rem}
 .how .feature p{break-inside:avoid}
 @media (max-width:800px){.how .feature{columns:1;padding:16px 18px 6px}}
+
+/* case-study links on the wall cards, and the link under the home slider */
+.tile-actions{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 12px}
+.tile-btn{flex:1 1 auto;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 8px;background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:999px;font:600 .8rem var(--display);text-decoration:none;transition:background .15s}
+.tile-btn.primary{background:var(--ink);color:#fff}
+.tile-btn:hover{background:var(--mist)}
+.tile-btn.primary:hover{background:#12304a}
+.tile-btn:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.car-all{margin:22px 0 0}
+@media (prefers-reduced-motion:reduce){.tile-btn{transition:none}}

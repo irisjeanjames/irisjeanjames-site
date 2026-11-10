@@ -28,20 +28,79 @@
   },
   "sites": [
     {
-      "domain": "puttputt.com",
-      "group": "clients"
-    },
-    {
-      "domain": "coastalvirginiamag.com",
-      "group": "publications"
-    },
-    {
       "domain": "beacheventsvb.com",
-      "group": "clients"
+      "group": "clients",
+      "case": "beach-events"
+    },
+    {
+      "domain": "puttputt.com",
+      "group": "clients",
+      "case": "putt-putt"
+    },
+    {
+      "domain": "gowilliamsburg.com",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "oceancity.guide",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "highcountry.guide",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "lakeanna.guide",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "tennesseesmokies.guide",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "delawarebeaches.guide",
+      "group": "guides",
+      "case": "visitor-guides"
+    },
+    {
+      "domain": "virginiabeach.guide",
+      "group": "guides",
+      "case": "visitor-guides"
     },
     {
       "domain": "virginiabeachhotelassociation.com",
-      "group": "clients"
+      "group": "clients",
+      "case": "vbha"
+    },
+    {
+      "domain": "coastalvirginiamag.com",
+      "group": "publications",
+      "case": "coastal-virginia-magazine"
+    },
+    {
+      "domain": "covaburgerbattle.com",
+      "group": "events",
+      "case": "coastal-virginia-magazine"
+    },
+    {
+      "domain": "coastalvirginiawinefest.com",
+      "group": "events",
+      "case": "coastal-virginia-magazine"
+    },
+    {
+      "domain": "covabizmag.com",
+      "group": "publications",
+      "case": "coastal-virginia-magazine"
+    },
+    {
+      "domain": "covaideahouse.com",
+      "group": "publications",
+      "case": "coastal-virginia-magazine"
     },
     {
       "domain": "blueridgecountry.com",
@@ -52,55 +111,11 @@
       "group": "publications"
     },
     {
-      "domain": "gowilliamsburg.com",
-      "group": "guides"
-    },
-    {
-      "domain": "oceancity.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "highcountry.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "lakeanna.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "tennesseesmokies.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "delawarebeaches.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "virginiabeach.guide",
-      "group": "guides"
-    },
-    {
-      "domain": "covaburgerbattle.com",
-      "group": "events"
-    },
-    {
-      "domain": "coastalvirginiawinefest.com",
-      "group": "events"
-    },
-    {
-      "domain": "covabizmag.com",
-      "group": "publications"
-    },
-    {
       "domain": "covadeals.com",
       "group": "publications"
     },
     {
       "domain": "lynchburgideahouse.com",
-      "group": "publications"
-    },
-    {
-      "domain": "covaideahouse.com",
       "group": "publications"
     },
     {
