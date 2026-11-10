@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | IrisJean James</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="That page could not be found.">
+<style>
+  :root{--ink:#1a405a;--ink-soft:#4a6678;--mist:#eef3f7;--line:#d5e0e8;--focus:#393d90}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font:1.125rem/1.6 Georgia,"Times New Roman",serif}
+  main{max-width:640px;margin:0 auto;padding:12vh 24px 64px}
+  .bar{height:10px;background:linear-gradient(90deg,#dc4d34,#f7c848,#8ec057,#48ac58,#3c98c6,#456caf,#393d90,#953189,#d9394f)}
+  h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin:0 0 .6rem}
+  p{margin:0 0 1.2rem;color:var(--ink-soft)}
+  ul{list-style:none;margin:1.6rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+  a{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:2px solid var(--ink);border-radius:999px;color:var(--ink);font-weight:700;text-decoration:none}
+  a.primary{background:var(--ink);color:#fff}
+  a:hover{background:var(--mist)}
+  a.primary:hover{background:#12304a}
+  a:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"></div>
+<main id="main">
+  <h1>That page took a wrong turn.</h1>
+  <p>The address doesn’t lead anywhere. It may have moved, or the link may have a typo.</p>
+  <ul>
+    <li><a class="primary" href="/" data-to="">Back to the home page</a></li>
+    <li><a href="/work/" data-to="work/">See the case studies</a></li>
+    <li><a href="/about/" data-to="about/">About me</a></li>
+  </ul>
+</main>
+<script>
+  // Works at irisjeanjames.com and on the GitHub Pages project address.
+  (function () {
+    var base = '/';
+    if (/(^|\.)github\.io$/.test(location.hostname)) {
+      var first = location.pathname.split('/')[1];
+      if (first) base = '/' + first + '/';
+    }
+    var links = document.querySelectorAll('a[data-to]');
+    for (var i = 0; i < links.length; i++) links[i].href = base + links[i].getAttribute('data-to');
+  })();
+</script>
+</body>
+</html>
